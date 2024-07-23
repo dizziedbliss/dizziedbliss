@@ -399,21 +399,21 @@
   
   .wireframe .rectangle-wrapper {
     position: absolute;
-    width: 550px;
-    height: 550px;
+    width: 300px;
+    height: 150px;
     top: 415px;
     left: 822px;
     background-color: #ffffff;
     border-radius: 20px;
-    border: 15px solid;
+    border: 10px solid;
     border-color: #ee00e6;
   }
   
   .wireframe .rectangle {
     position: relative;
-    width: 555px;
-    height: 555px;
-    top: -3px;
+    width: 300px;
+    height: 150px;
+    top: -1px;
     left: -2px;
     background-color: #ffffff;
     border-radius: 10px;
@@ -426,3 +426,46 @@
     cursor: crosshair;
     display: block;
   }
+
+  .links {
+    position: absolute;
+    width: 583px;
+    top: 600px;
+    left: 900px;
+    font-family: "Jua-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffd3e8;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal
+
+  }
+
+  .links #insta {
+    background: linear-gradient(to right, #f9ce34, #ee2a7b ,#6228d7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .links #linkedin {
+    color: #81b3ff;
+    text-decoration-line: none;
+
+  }
+
+    .links #github {
+        color: #ffffff;
+        text-decoration-line: none;
+    } 
+
+    .wireframe .scribble-here {
+        position: absolute;
+        width: 583px;
+        top: 400px;
+        left: 800px;
+        font-family: "Jua-Regular", Helvetica;
+        font-weight: 400;
+        color: #ffd3e8;
+        font-size: 22px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
