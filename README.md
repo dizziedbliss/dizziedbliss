@@ -5,5 +5,5 @@
 - 📫 How to reach me: How about discord?
 
 <!--START_SECTION:waka-->
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=dizziedbliss)
+![Harlok's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=dizziedbliss)
 <!--END_SECTION:waka-->
