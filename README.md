@@ -5,8 +5,5 @@
 - 📫 How to reach me: How about discord?
 
 <!--START_SECTION:waka-->
-<img
-  src="https://github.com/dizziedbliss/dizziedbliss/blob/main/images/stat.svg"
-  alt="Alternative Text"
-/>
+[![GitHub stats](https://github-readme-stats.vercel.app/api?username=dissiedbliss)]
 <!--END_SECTION:waka-->
