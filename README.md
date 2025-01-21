@@ -18,10 +18,10 @@
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://dev.to/dizziedbliss" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="dizziedbliss" height="30" width="40" /></a>
-<a href="https://twitter.com/dizziedbliss" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="dizziedbliss" height="30" width="40" /></a>
+<a href="https://twitter.com/dizzied_bliss" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="dizziedbliss" height="30" width="40" /></a>
 <a href="https://linkedin.com/in/adityapartha" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="adityapartha" height="30" width="40" /></a>
-<a href="https://stackoverflow.com/users/dizziedbliss" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="dizziedbliss" height="30" width="40" /></a>
-<a href="https://instagram.com/uh.oh.wrong.dimension" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="uh.oh.wrong.dimension" height="30" width="40" /></a>
+<a href="https://stackoverflow.com/users/20902492/dizziedbliss" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="dizziedbliss" height="30" width="40" /></a>
+<a href="https://instagram.com/dizziedbliss" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="uh.oh.wrong.dimension" height="30" width="40" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
