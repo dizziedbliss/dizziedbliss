@@ -1,0 +1,121 @@
+@use "index" as sassy;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: sassy.$font3;
+    color: sassy.$textColor;
+    position: relative;
+    background-image: url("/assets/images/bg.png");
+    background-position: center;
+    background-size: cover;
+    min-height: 200vh;
+    scroll-behavior: smooth;
+    a {
+        text-decoration: none;
+    }
+    ul li {
+        list-style: none;
+    }
+}
+
+.hero {
+    &__header {
+        .logo {
+            &__name {
+                font-size: 3rem;
+                font-family: sassy.$font2;
+                color: sassy.$accentColor;
+            }
+        }
+        nav {
+            ul li a {
+                font-family: sassy.$font1;
+                font-size: 1.2rem;
+                color: sassy.$textColor;
+                cursor: pointer;
+                transition: all 0.3s;
+                &:hover {
+                    color: sassy.$accentColor;
+                    font-size: 1.3rem;
+                }
+            }
+        }
+        nav a:target {
+            color: sassy.$accentColor;
+            font-size: 1.3rem;
+            scroll-margin-top: 100vh;
+        }
+
+        .contact {
+            button {
+                background-color: sassy.$primaryColor;
+                padding: 0.5rem 0.5rem;
+                border: none;
+                border-radius: 10px;
+                font-family: sassy.$font3;
+                font-size: 0.7rem;
+                cursor: pointer;
+                transition: all 0.3s;
+                a {
+                    color: sassy.$textColor;
+                }
+                &:hover {
+                    background-color: transparent;
+                    border: 1px solid;
+                    border-color: sassy.$accentColor;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+
+    &__main {
+        #home {
+            .hey {
+                font-family: sassy.$font3;
+                font-weight: 890;
+                font-size: 6rem;
+                text-align: start;
+                padding-top: 2rem;
+            }
+            .intro {
+                font-family: sassy.$font3;
+                font-size: 1.3rem;
+                text-align: start;
+                padding-left: 2rem;
+                padding-top: 1rem;
+            }
+            .viewWorks {
+                justify-self: center;
+                button {
+                    display: flex;
+                    gap: 1rem;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: transparent;
+                    border-color: transparent;
+                    cursor: pointer;
+                    a {
+                        align-self: auto;
+                        font-family: sassy.$font1;
+                        font-size: 1.2rem;
+                    }
+                    transition: all 0.3s;
+                    &:hover {
+                        gap: 0rem;
+                        a {
+                            color: sassy.$textColor;
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
