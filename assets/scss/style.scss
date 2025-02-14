@@ -64,8 +64,61 @@ html {
             }
 
             .contact {
+                display: inline-block;
+                position: relative;
+
                 button {
-                    @include sassy.buttonStyle();
+                    background-color: sassy.$primaryColor;
+                    padding: 0.5rem 1rem;
+                    border: none;
+                    border-radius: 10px;
+                    color: sassy.$accentColor;
+                    font-family: sassy.$font3;
+                    font-size: 0.7rem;
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+                }
+
+                &__links {
+                    display: none;
+                    position: absolute;
+                    top: 80%;
+                    left: -1%;
+
+                    background: rgba(0, 0, 0, 0);
+                    padding: 0.5rem;
+                    z-index: 10;
+
+                    a {
+                        display: block;
+                        font-family: sassy.$font1;
+                        font-size: 0.9rem;
+                        color: sassy.$accentColor;
+                        cursor: pointer;
+                        padding: 0.5rem;
+                        background-color: rgba(79, 39, 84, 0.5);
+                        backdrop-filter: blur(10px);
+                        width: 120px;
+                        margin: 5px;
+                        border-radius: 10px;
+                        transition: all 0.3s;
+
+                        &:hover {
+                            color: sassy.$accentColor;
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+                &:hover {
+                    button {
+                        background-color: transparent;
+                        border: 1px solid sassy.$accentColor;
+                        font-size: 0.9rem;
+                    }
+
+                    .contact__links {
+                        display: block;
+                    }
                 }
             }
         }
@@ -191,10 +244,57 @@ html {
                 font-size: 1.3rem;
                 scroll-margin-top: 100vh;
             }
-
             .contact {
+                display: inline-block;
+                position: relative;
+
                 button {
-                    @include sassy.buttonStyle();
+                    background-color: sassy.$primaryColor;
+                    padding: 0.5rem 1rem;
+                    border: none;
+                    border-radius: 10px;
+                    color: sassy.$accentColor;
+                    font-family: sassy.$font3;
+                    font-size: 0.7rem;
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+                }
+
+                &__links {
+                    display: none;
+                    position: absolute;
+                    bottom: 100%;
+                    left: 10%;
+                    //transform: translateX(-50%);
+                    background: rgba(0, 0, 0, 0);
+                    padding: 0.5rem;
+                    z-index: 10;
+
+                    a {
+                        display: block;
+                        font-family: sassy.$font1;
+                        font-size: 0.9rem;
+                        color: sassy.$textColor;
+                        cursor: pointer;
+                        padding: 0.3rem 0;
+                        transition: all 0.3s;
+
+                        &:hover {
+                            color: sassy.$accentColor;
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+                &:hover {
+                    button {
+                        background-color: transparent;
+                        border: 1px solid sassy.$accentColor;
+                        font-size: 0.9rem;
+                    }
+
+                    .contact__links {
+                        display: block;
+                    }
                 }
             }
         }
