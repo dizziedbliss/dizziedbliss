@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Share+Tech+Mono&family=Shizuru&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+.sacramento-regular {
+    font-family: "Sacramento", serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
+.inter {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.share-tech-mono-regular {
+    font-family: "Share Tech Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+$font1: Share Tech Mono;
+$font2: Sacramento;
+$font3: Inter;
+$textColor: #d9d9d9;
+$backgroundColor: #070605;
+$primaryColor: #9500c2;
+$accentColor: rgb(202, 172, 248);
+$secondaryColor: #53003a;
+$gradientColor: linear-gradient(120deg, #4f007a 100%, #ff8fdd 100%);
