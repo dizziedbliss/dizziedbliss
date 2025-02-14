@@ -11,10 +11,8 @@ html {
     font-family: sassy.$font3;
     color: sassy.$textColor;
     position: relative;
-    background-image: url("/assets/images/bg.png");
-    background-position: center;
-    background-size: cover;
-    min-height: 200vh;
+    min-height: 100vh;
+    height: auto;
     scroll-behavior: smooth;
     a {
         text-decoration: none;
@@ -23,97 +21,266 @@ html {
         list-style: none;
     }
 }
+//!small screeens
+@media (max-width: 900px) {
+    .hero {
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-image: url("/assets/images/bg-mobile.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        &__header {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-bottom: 2px solid sassy.$accentColor;
+            padding-bottom: 1rem;
+            backdrop-filter: blur(50px);
 
-.hero {
-    &__header {
-        .logo {
-            &__name {
-                font-size: 3rem;
-                font-family: sassy.$font2;
-                color: sassy.$accentColor;
-            }
-        }
-        nav {
-            ul li a {
-                font-family: sassy.$font1;
-                font-size: 1.2rem;
-                color: sassy.$textColor;
-                cursor: pointer;
-                transition: all 0.3s;
-                &:hover {
+            .logo {
+                &__name {
+                    font-size: 3rem;
+                    font-family: sassy.$font2;
                     color: sassy.$accentColor;
-                    font-size: 1.3rem;
+                }
+            }
+            nav {
+                ul li a {
+                    font-family: sassy.$font1;
+                    font-size: 1.2rem;
+                    color: sassy.$textColor;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    &:hover {
+                        color: sassy.$accentColor;
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+            nav a:target {
+                color: sassy.$accentColor;
+                font-size: 1.3rem;
+                scroll-margin-top: 100vh;
+            }
+
+            .contact {
+                button {
+                    @include sassy.buttonStyle();
                 }
             }
         }
-        nav a:target {
-            color: sassy.$accentColor;
-            font-size: 1.3rem;
-            scroll-margin-top: 100vh;
-        }
 
-        .contact {
-            button {
-                background-color: sassy.$primaryColor;
-                padding: 0.5rem 0.5rem;
-                border: none;
-                border-radius: 10px;
-                font-family: sassy.$font3;
-                font-size: 0.7rem;
-                cursor: pointer;
-                transition: all 0.3s;
-                a {
+        &__main {
+            #home {
+                .hey {
+                    font-family: sassy.$font3;
+                    font-weight: 890;
+                    font-size: 3rem;
+                    text-align: start;
+                    padding-top: 2rem;
+                }
+                .intro {
+                    font-family: sassy.$font3;
+                    font-size: 1rem;
+                    text-align: start;
+                    padding-left: 0rem;
+                    padding-top: 1rem;
+                }
+                .viewWorks {
+                    justify-self: center;
+                    button {
+                        display: flex;
+                        gap: 0rem;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: transparent;
+                        border-color: transparent;
+                        cursor: pointer;
+                        a {
+                            align-self: auto;
+                            font-family: sassy.$font1;
+                            font-size: 1.2rem;
+                            transition: all 0.3s ease-in-out;
+                        }
+                        transition: all 0.3s ease-in-out;
+                        &:hover {
+                            gap: 0rem;
+                            a {
+                                color: sassy.$textColor;
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .coreWork {
+                h2 {
+                    font-family: sassy.$font2;
+                    font-size: 3rem;
+                }
+                &__project1 {
+                    @include sassy.projectStyleMobile();
+                }
+            }
+            .sideQuest {
+                h2 {
+                    font-family: sassy.$font2;
+                    font-size: 3rem;
+                }
+                &__project1 {
+                    @include sassy.projectStyleMobile();
+                }
+            }
+            .beyondCode {
+                &__head {
+                    font-family: sassy.$font1;
+                    font-size: 2rem;
                     color: sassy.$textColor;
                 }
-                &:hover {
-                    background-color: transparent;
-                    border: 1px solid;
-                    border-color: sassy.$accentColor;
-                    font-size: 0.9rem;
+                &__pfp {
+                    justify-self: center;
+                    img {
+                        border-radius: 50%;
+                        width: 30%;
+                        height: auto;
+                        object-fit: cover;
+                        border: 2px solid sassy.$accentColor;
+                    }
+                }
+                &__Content {
+                    text-align: center;
+                    font-family: sassy.$font3;
+                    font-size: 1rem;
+                    line-height: 1.5rem;
                 }
             }
         }
     }
+}
 
-    &__main {
-        #home {
-            .hey {
-                font-family: sassy.$font3;
-                font-weight: 890;
-                font-size: 6rem;
-                text-align: start;
-                padding-top: 2rem;
+@media (min-width: 900px) {
+    .hero {
+        background-image: url("/assets/images/bg.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        &__header {
+            .logo {
+                &__name {
+                    font-size: 3rem;
+                    font-family: sassy.$font2;
+                    color: sassy.$accentColor;
+                }
             }
-            .intro {
-                font-family: sassy.$font3;
-                font-size: 1.3rem;
-                text-align: start;
-                padding-left: 2rem;
-                padding-top: 1rem;
-            }
-            .viewWorks {
-                justify-self: center;
-                button {
-                    display: flex;
-                    gap: 1rem;
-                    justify-content: center;
-                    align-items: center;
-                    background-color: transparent;
-                    border-color: transparent;
+            nav {
+                ul li a {
+                    font-family: sassy.$font1;
+                    font-size: 1.2rem;
+                    color: sassy.$textColor;
                     cursor: pointer;
-                    a {
-                        align-self: auto;
-                        font-family: sassy.$font1;
-                        font-size: 1.2rem;
-                    }
                     transition: all 0.3s;
                     &:hover {
-                        gap: 0rem;
+                        color: sassy.$accentColor;
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+            nav a:target {
+                color: sassy.$accentColor;
+                font-size: 1.3rem;
+                scroll-margin-top: 100vh;
+            }
+
+            .contact {
+                button {
+                    @include sassy.buttonStyle();
+                }
+            }
+        }
+
+        &__main {
+            #home {
+                .hey {
+                    font-family: sassy.$font3;
+                    font-weight: 890;
+                    font-size: 6rem;
+                    text-align: start;
+                    padding-top: 2rem;
+                }
+                .intro {
+                    font-family: sassy.$font3;
+                    font-size: 1.3rem;
+                    text-align: start;
+                    padding-left: 2rem;
+                    padding-top: 1rem;
+                }
+                .viewWorks {
+                    justify-self: center;
+                    button {
+                        display: flex;
+                        gap: 1rem;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: transparent;
+                        border-color: transparent;
+                        cursor: pointer;
                         a {
-                            color: sassy.$textColor;
-                            font-size: 1.4rem;
+                            align-self: auto;
+                            font-family: sassy.$font1;
+                            font-size: 1.2rem;
+                            transition: all 0.3s ease-in-out;
+                        }
+                        transition: all 0.3s ease-in-out;
+                        &:hover {
+                            gap: 0rem;
+                            a {
+                                color: sassy.$textColor;
+                                font-size: 1.4rem;
+                            }
                         }
                     }
+                }
+            }
+            .coreWork {
+                h2 {
+                    font-family: sassy.$font2;
+                    font-size: 3rem;
+                }
+                &__project1 {
+                    @include sassy.projectStyle();
+                }
+            }
+            .sideQuest {
+                h2 {
+                    font-family: sassy.$font2;
+                    font-size: 3rem;
+                }
+                &__project1 {
+                    @include sassy.projectStyle();
+                }
+            }
+            .beyondCode {
+                &__head {
+                    font-family: sassy.$font1;
+                    font-size: 3rem;
+                    color: sassy.$textColor;
+                }
+                &__pfp {
+                    justify-self: center;
+                    img {
+                        border-radius: 50%;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border: 2px solid sassy.$accentColor;
+                    }
+                }
+                &__Content {
+                    text-align: center;
+                    font-family: sassy.$font3;
+                    font-size: 1.5rem;
+                    line-height: 2rem;
                 }
             }
         }
