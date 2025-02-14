@@ -9,7 +9,7 @@
 
 - 🤝 I’m looking for help with **Everything I know**
 
-- 👨‍💻 All of my projects are available at [minach.xyz](minach.xyz)
+- 👨‍💻 All of my projects are available at [minach.xyz](https://minach.xyz)
 
 - 📫 How to reach me **Go to discord ig**
 
