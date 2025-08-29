@@ -1,0 +1,141 @@
+// src/styles/main.scss
+
+// Import fonts
+@font-face {
+    font-family: 'Undertale-Font';
+    src: url('./fonts/Undertale-Battle-Font.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Minecraft-Font';
+    src: url('./fonts/Minecraft-Regular.woff2') format('woff2');
+}
+
+// Import variables and mixins
+@import './_variables';
+@import './_mixins';
+
+// Import component styles
+@import './components/TimelineNav';
+@import './components/App';
+@import './components/Home';
+@import './components/Projects';
+@import './components/About';
+@import './components/Contact';
+@import './components/SplitLayout';
+
+// Global styles
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+// Import other section styles
+@import './_sections';
+@import './_extras';
+
+// Variables for each theme
+:root {
+    --bg-color-a: #111;
+    --text-color-a: #eee;
+    --line-color-a: #555;
+    --point-color-a: #fff;
+    --font-a: 'Undertale-Font', monospace;
+
+    --bg-color-b: #8b4513; // A deep brown for a cottage feel
+    --text-color-b: #f5f5dc; // Beige
+    --line-color-b: #d2b48c; // Tan
+    --point-color-b: #6b8e23; // Olive
+    --font-b: 'Minecraft-Font', cursive;
+}
+
+.app {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+}
+
+.app.theme-a {
+    background-color: var(--bg-color-a);
+    color: var(--text-color-a);
+}
+
+.app.theme-b {
+    background-color: var(--bg-color-b);
+    color: var(--text-color-b);
+}
+
+.theme-wrapper {
+    display: flex;
+    width: 200vw;
+    height: 100vh;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.theme-wrapper.is-hovering-b {
+    transform: translateX(-100vw);
+}
+
+.theme-content {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    position: relative;
+    scroll-snap-type: y mandatory;
+}
+
+.section {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Timeline Navigation */
+.timeline-nav {
+    position: fixed;
+    left: 20px;
+    top: 88%;
+    transform: translateY(-50%);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-line {
+    width: 2px;
+    height: 80vh;
+}
+
+.nav-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-point {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+.timeline-nav.theme-a-nav .nav-line { background-color: var(--line-color-a); }
+.timeline-nav.theme-a-nav .nav-point { background-color: var(--point-color-a); }
+.timeline-nav.theme-b-nav .nav-line { background-color: var(--line-color-b); }
+.timeline-nav.theme-b-nav .nav-point { background-color: var(--point-color-b); }
+
+/* Theme-specific styles */
+.theme-a-home { font-family: var(--font-a); }
+.theme-b-home { font-family: var(--font-b); }
+
+/* You'll add more SCSS for each section (Projects, AboutMe, etc.) */

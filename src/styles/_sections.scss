@@ -1,0 +1,85 @@
+// src/styles/_sections.scss
+
+.projects-section,
+.about-me-section,
+.contact-section {
+    font-family: var(--font-a);
+    text-align: center;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+/* Specific styles for theme A (Undertale) */
+.theme-a-projects .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.theme-a-projects .project-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--text-color-a);
+    padding: 20px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.theme-a-contact .contact-links a {
+    color: var(--text-color-a);
+    border: 2px solid var(--text-color-a);
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 0 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Specific styles for theme B (Minecraft) */
+.theme-b-projects,
+.theme-b-about,
+.theme-b-contact {
+    font-family: var(--font-b);
+}
+
+.theme-b-projects .project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.theme-b-projects .project-card {
+    background-color: var(--line-color-b);
+    border: 3px solid var(--point-color-b);
+    padding: 25px;
+    box-shadow: 5px 5px 0px var(--point-color-b);
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.theme-b-contact .contact-links a {
+    color: var(--text-color-b);
+    border: 2px dashed var(--text-color-b);
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 0 10px;
+    display: inline-block;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--bg-color-b);
+    }
+}
