@@ -1,0 +1,88 @@
+// Theme A - Tech/Teal Theme
+$theme-a-primary: rgb(64, 224, 208); // Teal
+$theme-a-secondary: rgb(128, 0, 128); // Purple
+$theme-a-background: rgb(10, 10, 20); // Dark Navy
+$theme-a-text: rgb(240, 240, 255); // Light Blue-White
+$theme-a-accent: rgb(0, 255, 255); // Cyan
+
+.theme-a {
+    // Theme visuals are applied to the content panel so they move with the content.
+    color: $theme-a-text;
+
+    .theme-a-content {
+        background: linear-gradient(135deg,
+                rgba($theme-a-primary, 0.1),
+                rgba($theme-a-secondary, 0.1));
+        background-color: $theme-a-background;
+        color: $theme-a-text;
+    }
+
+    /* Fonts specific to Theme-A panel */
+    .theme-a-content {
+        font-family: 'SpaceMono', monospace;
+    }
+
+    .theme-a-content h1,
+    .theme-a-content h2,
+    .theme-a-content h3 {
+        font-family: 'Medodica', serif;
+    }
+
+    .section-container {
+        border-left: 2px solid rgba($theme-a-primary, 0.2);
+    }
+
+    a {
+        color: $theme-a-primary;
+
+        &:hover {
+            color: $theme-a-accent;
+        }
+    }
+
+    // Button styles
+    button {
+        background: rgba($theme-a-primary, 0.1);
+        border: 1px solid rgba($theme-a-primary, 0.3);
+        color: $theme-a-text;
+
+        &:hover {
+            background: rgba($theme-a-primary, 0.2);
+            border-color: $theme-a-primary;
+        }
+    }
+
+    // Heading styles
+    h1,
+    h2,
+    h3 {
+        color: $theme-a-primary;
+        text-shadow: 0 0 10px rgba($theme-a-primary, 0.3);
+    }
+
+    // Timeline nav theme
+    .timeline-nav {
+        .nav-line {
+            background: linear-gradient(180deg,
+                    rgba($theme-a-primary, 0.1),
+                    rgba($theme-a-primary, 0.4),
+                    rgba($theme-a-primary, 0.1));
+        }
+
+        .timeline-marker {
+            background-color: rgba($theme-a-primary, 0.5);
+            box-shadow: 0 0 10px rgba($theme-a-primary, 0.3);
+        }
+
+        .timeline-section.active {
+            .timeline-marker {
+                background-color: $theme-a-primary;
+                box-shadow: 0 0 20px rgba($theme-a-primary, 0.5);
+            }
+
+            .section-name {
+                color: $theme-a-primary;
+            }
+        }
+    }
+}

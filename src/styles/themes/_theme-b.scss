@@ -1,0 +1,88 @@
+// Theme B - Creative/Orange Theme
+$theme-b-primary: rgb(255, 140, 0); // Orange
+$theme-b-secondary: rgb(255, 0, 128); // Hot Pink
+$theme-b-background: rgb(20, 10, 10); // Dark Red-Black
+$theme-b-text: rgb(255, 240, 230); // Warm White
+$theme-b-accent: rgb(255, 200, 0); // Gold
+
+.theme-b {
+    // Theme visuals are applied to the content panel so they move with the content.
+    color: $theme-b-text;
+
+    .theme-b-content {
+        background: linear-gradient(135deg,
+                rgba($theme-b-primary, 0.1),
+                rgba($theme-b-secondary, 0.1));
+        background-color: $theme-b-background;
+        color: $theme-b-text;
+    }
+
+    /* Fonts specific to Theme-B panel */
+    .theme-b-content {
+        font-family: 'Delius', serif;
+    }
+
+    .theme-b-content h1,
+    .theme-b-content h2,
+    .theme-b-content h3 {
+        font-family: 'ChildHood', serif;
+    }
+
+    .section-container {
+        border-left: 2px solid rgba($theme-b-primary, 0.2);
+    }
+
+    a {
+        color: $theme-b-primary;
+
+        &:hover {
+            color: $theme-b-accent;
+        }
+    }
+
+    // Button styles
+    button {
+        background: rgba($theme-b-primary, 0.1);
+        border: 1px solid rgba($theme-b-primary, 0.3);
+        color: $theme-b-text;
+
+        &:hover {
+            background: rgba($theme-b-primary, 0.2);
+            border-color: $theme-b-primary;
+        }
+    }
+
+    // Heading styles
+    h1,
+    h2,
+    h3 {
+        color: $theme-b-primary;
+        text-shadow: 0 0 10px rgba($theme-b-primary, 0.3);
+    }
+
+    // Timeline nav theme
+    .timeline-nav {
+        .nav-line {
+            background: linear-gradient(180deg,
+                    rgba($theme-b-primary, 0.1),
+                    rgba($theme-b-primary, 0.4),
+                    rgba($theme-b-primary, 0.1));
+        }
+
+        .timeline-marker {
+            background-color: rgba($theme-b-primary, 0.5);
+            box-shadow: 0 0 10px rgba($theme-b-primary, 0.3);
+        }
+
+        .timeline-section.active {
+            .timeline-marker {
+                background-color: $theme-b-primary;
+                box-shadow: 0 0 20px rgba($theme-b-primary, 0.5);
+            }
+
+            .section-name {
+                color: $theme-b-primary;
+            }
+        }
+    }
+}

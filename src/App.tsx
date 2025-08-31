@@ -21,7 +21,9 @@ const App: React.FC = () => {
     };
 
     const [isHoveringB, setIsHoveringB] = useState(false);
+    const [appliedTheme, setAppliedTheme] = useState<'A' | 'B'>('A');
     const [activeSection, setActiveSection] = useState('home');
+    const [showLoading, setShowLoading] = useState(true);
 
     const sections = useMemo(() => [
         { name: 'Home', ref: sectionRefs.home },
@@ -66,9 +68,6 @@ const App: React.FC = () => {
 
             // Update active section
             updateActiveSection(scrollTop);
-
-            // Update divider offset to match scroll
-            setDividerOffset(scrollTop);
         };
 
         if (themeA && themeB) {
@@ -84,6 +83,20 @@ const App: React.FC = () => {
             };
         }
     }, [sections]);
+
+    // Loading overlay: show for at least 2.5s on first load
+    useEffect(() => {
+        const minMs = 2500; // mandatory 2-3 seconds
+        const t = setTimeout(() => setShowLoading(false), minMs);
+        return () => clearTimeout(t);
+    }, []);
+
+    // Apply theme after the slide animation finishes so colors/fonts follow the movement
+    useEffect(() => {
+        const transitionMs = 500; // match CSS transition (0.5s)
+        const t = setTimeout(() => setAppliedTheme(isHoveringB ? 'B' : 'A'), transitionMs);
+        return () => clearTimeout(t);
+    }, [isHoveringB]);
 
     const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
         if (ref.current) {
@@ -120,11 +133,20 @@ const App: React.FC = () => {
     }, []);
 
     return (
-        <div id="main-container" className="app theme-a">
+        <div id="main-container" className={`app ${appliedTheme === 'B' ? 'theme-b' : 'theme-a'}`}>
+            {showLoading && (
+                <div className="loading-overlay">
+                    <div className="loading-text">
+                        {['L', 'O', 'A', 'D', 'I', 'N', 'G'].map((ch, i) => (
+                            <span key={i} style={{ ...({ ['--i']: String(i) } as unknown as React.CSSProperties) }}>{ch}</span>
+                        ))}
+                    </div>
+                </div>
+            )}
             <TimelineNav
                 sections={sections}
                 scrollToSection={scrollToSection}
-                activeTheme="A"
+                activeTheme={appliedTheme}
                 activeSection={activeSection}
             />
             <div className={`theme-wrapper ${isHoveringB ? 'is-hovering-b' : ''}`}>
