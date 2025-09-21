@@ -2,29 +2,39 @@
 
 @mixin buttonStyle() {
     background-color: sassy.$primaryColor;
-    padding: 0.5rem 0.5rem;
     border: none;
     border-radius: 10px;
+    color: sassy.$accentColor;
     font-family: sassy.$font3;
-    font-size: 0.7rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+
     a {
-        color: sassy.$textColor;
-    }
-    &:hover {
-        background-color: transparent;
-        border: 1px solid;
-        border-color: sassy.$accentColor;
+        display: block;
+        font-family: sassy.$font1;
         font-size: 0.9rem;
+        color: sassy.$accentColor;
+        cursor: pointer;
+        padding: 0.5rem;
+        background-color: rgba(79, 39, 84, 0.5);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        transition: all 0.3s;
+
+
+        &:hover {
+            background-color: transparent;
+            border: 1px solid;
+            border-color: sassy.$accentColor;
+            font-size: 1.5rem;
+        }
     }
 }
 
 @mixin projectGrid() {
     display: grid;
     grid-template-rows:
-        minmax(30px, 1fr) minmax(30px, 1fr) minmax(30px, 1fr)
-        minmax(30px, auto) minmax(30px, auto) minmax(30px, auto) minmax(30px, 1fr);
+        minmax(30px, 1fr) minmax(30px, 1fr) minmax(30px, 1fr) minmax(30px, auto) minmax(30px, auto) minmax(30px, auto) minmax(30px, 1fr);
     grid-template-columns: repeat(5, minmax(30px, 1fr));
     gap: 1rem;
     grid-template-areas:
@@ -38,12 +48,15 @@
     &__img {
         grid-area: img;
     }
+
     &__Name {
         grid-area: Name;
     }
+
     &__Description {
         grid-area: Description;
     }
+
     &__btn {
         grid-area: btn;
     }
@@ -55,10 +68,12 @@
     background-color: rgba(202, 172, 248, 5%);
     backdrop-filter: blur(10px);
     transition: all 0.3s;
+
     &:hover {
         box-shadow: sassy.$accentColor 0px 0px 10px 0px;
         transform: translateY(-5px);
     }
+
     &__Name {
         font-family: sassy.$font1;
         font-size: 2rem;
@@ -68,6 +83,7 @@
         color: sassy.$textColor;
         text-shadow: sassy.$accentColor 0px 0px 10px;
     }
+
     &__Description {
         font-family: sassy.$font3;
         font-size: 1rem;
@@ -77,12 +93,14 @@
         padding-left: 6.5%;
         line-height: 1.5rem;
     }
+
     &__img {
         width: 80%;
         height: auto;
         place-self: center;
         opacity: 50%;
     }
+
     &__btn {
         @include buttonStyle();
         margin-left: 25%;
@@ -93,8 +111,7 @@
 @mixin projectGridMobile() {
     display: grid;
     grid-template-rows:
-        minmax(30px, 1fr) minmax(30px, 1fr) minmax(30px, 1fr)
-        minmax(30px, auto) minmax(30px, auto) minmax(30px, auto) minmax(10px, auto);
+        minmax(30px, 1fr) minmax(30px, 1fr) minmax(30px, 1fr) minmax(30px, auto) minmax(30px, auto) minmax(30px, auto) minmax(10px, auto);
     grid-template-columns: repeat(5, minmax(30px, 1fr));
     grid-template-areas:
         ".       Name            Name            .               ."
@@ -107,12 +124,15 @@
     &__img {
         grid-area: img;
     }
+
     &__Name {
         grid-area: Name;
     }
+
     &__Description {
         grid-area: Description;
     }
+
     &__btn {
         grid-area: btn;
     }
@@ -124,10 +144,12 @@
     background-color: rgba(202, 172, 248, 5%);
     backdrop-filter: blur(10px);
     transition: all 0.3s;
+
     &:hover {
         box-shadow: sassy.$accentColor 0px 0px 10px 0px;
         transform: translateY(-5px);
     }
+
     &__Name {
         font-family: sassy.$font1;
         font-size: 1.5rem;
@@ -137,6 +159,7 @@
         color: sassy.$textColor;
         text-shadow: sassy.$accentColor 0px 0px 10px;
     }
+
     &__Description {
         font-family: sassy.$font3;
         font-size: 0.8rem;
@@ -146,12 +169,14 @@
         padding-left: 4%;
         line-height: 1.5rem;
     }
+
     &__img {
         width: 90%;
         height: auto;
         place-self: center;
         opacity: 50%;
     }
+
     &__btn {
         @include buttonStyle();
         margin-left: 5%;

@@ -115,7 +115,7 @@
                     align-self: flex-start;
                 }
                 &__project1 {
-                    @include sassy.projectGridMobile();
+                    // @include sassy.projectGridMobile();
                 }
             }
             #beyondCode {
@@ -252,7 +252,7 @@
                     align-self: flex-start;
                 }
                 &__project1 {
-                    @include sassy.projectGrid();
+                    // @include sassy.projectGrid();
                 }
             }
             #beyondCode {

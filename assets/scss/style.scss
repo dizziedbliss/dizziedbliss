@@ -182,7 +182,11 @@ html {
                 }
                 &__project1 {
                     @include sassy.projectStyleMobile();
+                    &__Name{
+                        place-self: center;
+                    }
                 }
+               
             }
             .beyondCode {
                 &__head {
@@ -374,7 +378,10 @@ html {
                         height: 100%;
                         object-fit: cover;
                         border: 2px solid sassy.$accentColor;
+                       
                     }
+                     margin-bottom: 3rem;
+                     margin-top: 3rem;
                 }
                 &__Content {
                     text-align: center;
