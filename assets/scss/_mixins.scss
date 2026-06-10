@@ -108,6 +108,84 @@
     }
 }
 
+@mixin SQGrid() {
+    display: grid;
+    grid-template-rows:
+        minmax(30px, 1fr) minmax(30px, 1fr) minmax(30px, 1fr) minmax(30px, auto) minmax(30px, auto) minmax(30px, auto) minmax(30px, 1fr);
+    grid-template-columns: repeat(5, minmax(30px, 1fr));
+    gap: 1rem;
+    grid-template-areas:
+        ".          Name            Name            .               ."
+        "img        Name            Name            .               ."
+        "img        Description     Description     Description     ."
+        "img        Description     Description     Description     ."
+        "img        Description     Description     Description     ."
+        ".          .               .               btn             btn";
+
+    &__img {
+        grid-area: img;
+    }
+
+    &__Name {
+        grid-area: Name;
+    }
+
+    &__Description {
+        grid-area: Description;
+    }
+
+    &__btn {
+        grid-area: btn;
+    }
+}
+
+@mixin SQStyle() {
+    border-radius: 5px;
+    padding: 1%;
+    background-color: rgba(202, 172, 248, 5%);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+
+    &:hover {
+        box-shadow: sassy.$accentColor 0px 0px 10px 0px;
+        transform: translateY(-5px);
+    }
+
+    &__Name {
+        font-family: sassy.$font1;
+        font-size: 2rem;
+        font-weight: 600;
+        align-self: center;
+        padding-left: 10%;
+        color: sassy.$textColor;
+        text-shadow: sassy.$accentColor 0px 0px 10px;
+    }
+
+    &__Description {
+        font-family: sassy.$font3;
+        font-size: 1rem;
+        color: sassy.$textColor;
+        justify-self: start;
+        align-self: start;
+        padding-left: 6.5%;
+        line-height: 1.5rem;
+    }
+
+    &__img {
+        width: 80%;
+        height: auto;
+        place-self: center;
+        opacity: 50%;
+    }
+
+    &__btn {
+        @include buttonStyle();
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
+
+
 @mixin projectGridMobile() {
     display: grid;
     grid-template-rows:

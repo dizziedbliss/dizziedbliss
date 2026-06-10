@@ -154,6 +154,7 @@ html {
                             font-family: sassy.$font1;
                             font-size: 1.2rem;
                             transition: all 0.3s ease-in-out;
+                            color: sassy.$accentColor;
                         }
                         transition: all 0.3s ease-in-out;
                         &:hover {
@@ -334,13 +335,14 @@ html {
                             font-family: sassy.$font1;
                             font-size: 1.2rem;
                             transition: all 0.3s ease-in-out;
+                            color: sassy.$accentColor;
                         }
                         transition: all 0.3s ease-in-out;
                         &:hover {
                             gap: 0rem;
                             a {
                                 color: sassy.$textColor;
-                                font-size: 1.4rem;
+                                transform: scale(1.1);
                             }
                         }
                     }
@@ -361,7 +363,7 @@ html {
                     font-size: 3rem;
                 }
                 &__project1 {
-                    @include sassy.projectStyle();
+                    @include sassy.SQStyle();
                 }
             }
             .beyondCode {

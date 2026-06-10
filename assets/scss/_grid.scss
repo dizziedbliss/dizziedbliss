@@ -252,7 +252,7 @@
                     align-self: flex-start;
                 }
                 &__project1 {
-                    // @include sassy.projectGrid();
+                     @include sassy.SQGrid();
                 }
             }
             #beyondCode {
