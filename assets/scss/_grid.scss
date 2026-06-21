@@ -107,7 +107,7 @@
             }
             .sideQuest {
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
                 gap: 1rem;
                 justify-content: center;
                 align-items: center;
@@ -252,7 +252,7 @@
                     align-self: flex-start;
                 }
                 &__project1 {
-                     @include sassy.SQGrid();
+                    @include sassy.SQGrid();
                 }
             }
             #beyondCode {
