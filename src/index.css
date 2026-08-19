@@ -1,0 +1,16 @@
+/* Google Fonts — must be first */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Matemasie&family=Gafata&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+  --font-inter: 'Inter', sans-serif;
+  --font-matemasie: 'Matemasie', sans-serif;
+  --font-gafata: 'Gafata', sans-serif;
+}
+
+/* Hide scrollbar by default, show on hover */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: transparent; border-radius: 3px; }
+html:hover::-webkit-scrollbar-thumb { background: rgba(253,146,132,0.4); }
