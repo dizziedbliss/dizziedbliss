@@ -24,7 +24,7 @@ function PillBtn({ children, href, onClick }: { children: React.ReactNode; href?
       </span>
     </div>
   );
-  if (href) return <a href={href} target="_blank" rel="noreferrer">{inner}</a>;
+  if (href) return <a href={href} {...(/^https?:\/\//.test(href) ? { target: "_blank", rel: "noreferrer" } : {})}>{inner}</a>;
   if (onClick) return <button onClick={onClick} className="appearance-none bg-transparent border-none p-0">{inner}</button>;
   return <>{inner}</>;
 }
@@ -131,7 +131,7 @@ function HomeSection() {
             style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400 }}>
             I build intelligent systems, weird interfaces and occasionally overthink quantum physics at 2am
           </p>
-          <PillBtn href="mailto:adithya@example.com">get in touch</PillBtn>
+          <PillBtn href="#profiles">get in touch</PillBtn>
           <img src={imgDoodleSmall} alt="" aria-hidden
             className="mt-8 w-16 md:w-20 opacity-60 pointer-events-none select-none" />
         </div>
@@ -366,6 +366,7 @@ const PROFILE_PILLS = [
   { label: "Github", href: "https://github.com/dizziedbliss", restX: 46, restY: 8 },
   { label: "Discord", href: "https://discord.com/users/dizziedbliss", restX: 20, restY: 58 },
   { label: "Resume", href: "https://drive.google.com/file/d/1aK8wLhOJcn4xlEZjVcS4rd9UNP95_vUW/view?usp=sharing", restX: 58, restY: 50 },
+  { label: "Email", href: "mailto:dizziedbliss@gmail.com", restX: 85, restY: 25 },
 ];
 
 function ProfilesSection() {
