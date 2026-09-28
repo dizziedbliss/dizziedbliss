@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #faf8f2;
+  --color-ink: #1b1b1b;
+  --color-coral: #fd9284;
+  --color-surface: rgba(64, 64, 64, 0.89);
+  --color-paper: #faf8f2;
+  --color-grid: rgba(59, 157, 221, 0.15);
+
+  --shadow-pill: 0 4px 14px rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-project: 8px 8px 0px #faf8f2;
+}
+
+.site-section {
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .site-section {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-section {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-section {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+.pill-surface {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  border-width: 4px;
+  border-color: #faf8f2;
+  background-color: rgba(64, 64, 64, 0.89);
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.dark-card {
+  border-radius: 28px;
+  border-width: 4px;
+  border-color: #faf8f2;
+  background-color: rgba(64, 64, 64, 0.89);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.project-card {
+  width: 100%;
+  border-radius: 28px;
+  border-width: 5px;
+  border-color: #faf8f2;
+  background-color: rgba(64, 64, 64, 0.89);
+  padding: 1.25rem;
+  box-shadow: 8px 8px 0px #faf8f2;
+}
+
+@media (min-width: 640px) {
+  .project-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .project-card {
+    padding: 2rem;
+  }
+} 
