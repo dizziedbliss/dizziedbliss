@@ -5,7 +5,7 @@ export const PROFILE_PILLS = [
 
      { label: "Discord", href: "https\://discord.com/users/dizziedbliss", restX: 20, restY: 58 },
 
-     { label: "Resume", href: "https\://drive.google.com/file/d/1aK8wLhOJcn4xlEZjVcS4rd9UNP95_vUW/view?usp=sharing", restX: 58, restY: 50 },
+     { label: "Resume", href: "https\://drive.google.com/file/d/1-bxhjgDXbax1bq9voCCDBiF3027iIetX/view?usp=drivesdk", restX: 58, restY: 50 },
 
      { label: "Email", href: "mailto:dizziedbliss\@gmail.com", restX: 85, restY: 25 },
 ];
