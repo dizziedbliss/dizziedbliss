@@ -1,9 +1,60 @@
 <!doctype html>
-<html lang="<!-- figma:lang -->">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Max!!</title>
+    <meta name="theme-color" content="#0c0c0b" />
+    <title>Max!! · Adithya</title>
+    <meta
+      name="description"
+      content="Hello, this is Max!! Nice to meet you :3."
+    />
+    <meta name="author" content="Adithya (Max!!)" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="https://dizziedbliss.lol/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dizziedbliss.lol/" />
+    <meta property="og:site_name" content="Max!!" />
+    <meta property="og:title" content="Max!! · Adithya" />
+    <meta
+      property="og:description"
+      content="Portfolio of Adithya (Max!!). The cat is alive or dead, nobody knows until you look."
+    />
+    <meta property="og:image" content="https://dizziedbliss.lol/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Max!! · Adithya" />
+    <meta
+      name="twitter:description"
+      content="Portfolio of Adithya (Max!!). The cat is alive or dead, nobody knows until you look."
+    />
+    <meta name="twitter:image" content="https://dizziedbliss.lol/og.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // apply the saved theme before first paint so light-mode visitors don't see a dark flash
+      try {
+        if (localStorage.getItem("theme") === "light") {
+          document.documentElement.dataset.theme = "light";
+          document.querySelector('meta[name="theme-color"]').setAttribute("content", "#e7e1d3");
+        }
+      } catch (e) {}
+    </script>
+    <style>
+      html,
+      body {
+        background: #0c0c0b;
+      }
+      html[data-theme="light"],
+      html[data-theme="light"] body {
+        background: #e7e1d3;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>

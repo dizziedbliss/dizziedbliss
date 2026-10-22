@@ -1,39 +1,54 @@
-import { PageDoodles } from "@/components/PageDoodles";
+import { useEffect } from "react";
+import { RouterProvider, useRouter } from "@/router";
 import { Nav } from "@/components/Nav";
-import { HomeSection } from "@/components/HomeSection";
-import { ProjectsSection } from "@/components/ProjectsSection";
-import { ProfilesSection } from "@/components/ProfilesSection";
-import { AboutSection } from "@/components/AboutSection";
 import { Footer } from "@/components/Footer";
-import { imgTextureBg } from "@/config/assets";
+import { SpillTheTea } from "@/components/SpillTheTea";
+import { HomePage } from "@/pages/HomePage";
+import { ProjectPage } from "@/pages/ProjectPage";
+import { ContactPage } from "@/pages/ContactPage";
+import { SkillsPage } from "@/pages/SkillsPage";
+import { NotFoundPage } from "@/pages/NotFoundPage";
+
+function Pages() {
+  const { path } = useRouter();
+
+  if (path === "/") return <HomePage />;
+  if (path === "/contact") return <ContactPage />;
+  if (path === "/skills") return <SkillsPage />;
+  if (path.startsWith("/project/")) return <ProjectPage slug={path.slice("/project/".length)} />;
+  return <NotFoundPage />;
+}
+
+// experiment: while you're looking away, the cat's fate is unknown
+function useSchrodingerTitle() {
+  useEffect(() => {
+    let saved = document.title;
+    const onChange = () => {
+      if (document.hidden) {
+        saved = document.title;
+        document.title = "Is the cat dead? · Max!!";
+      } else {
+        document.title = saved;
+      }
+    };
+    document.addEventListener("visibilitychange", onChange);
+    return () => document.removeEventListener("visibilitychange", onChange);
+  }, []);
+}
 
 export default function App() {
+  useSchrodingerTitle();
+
   return (
-    <div
-      className="relative min-h-screen overflow-x-hidden bg-canvas"
-      style={{
-        backgroundImage: `
-          linear-gradient(var(--color-grid) 1px, transparent 1px),
-          linear-gradient(90deg, var(--color-grid) 1px, transparent 1px)
-        `,
-        backgroundSize: "32px 32px",
-      }}
-    >
-      <img
-        src={imgTextureBg}
-        alt=""
-        aria-hidden
-        className="fixed inset-0 z-0 h-full w-full object-cover opacity-10 pointer-events-none select-none"
-      />
-      <PageDoodles />
-      <div className="relative z-10">
+    <RouterProvider>
+      <div className="noise noise-fixed min-h-screen overflow-x-hidden bg-canvas">
         <Nav />
-        <HomeSection />
-        <ProjectsSection />
-        <ProfilesSection />
-        <AboutSection />
+        <main>
+          <Pages />
+        </main>
         <Footer />
+        <SpillTheTea />
       </div>
-    </div>
+    </RouterProvider>
   );
 }
