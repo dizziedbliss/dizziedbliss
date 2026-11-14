@@ -64,6 +64,46 @@ export const ALL_PROJECTS: Project[] = [
     ],
   },
   {
+    slug: "meowance",
+    name: "Meowance",
+    tagline: "Attendance survival kit",
+    description:
+      "meow + attendance. Log in with your USN and birthday and it pulls your attendance off the college portal, then tells you how many classes you have to attend (or can still skip) to stay out of the fine zone. It also shows this week's timetable, your CIE marks, past sems' grades and the semester calendar.",
+    details: [
+      "Every class is a box in real order: filled means pawsent, hollow means bunked, orange is what you still owe. Tap a course to see exactly when you bunked.",
+      "A Go function on Vercel logs into the portal for you, scrapes it and does the bunk math. Nothing is stored on the server; the browser keeps your login encrypted with WebCrypto.",
+      "Under 75% you're dead, 75 to 85 you pay a fine, 85+ you're purring.",
+    ],
+    term: {
+      word: "CIE",
+      info: "Continuous internal evaluation: the internal tests through the semester.",
+    },
+    repo: "https://github.com/dizziedbliss/meowance",
+    live: "https://meowance.vercel.app",
+    stack: ["Go", "React", "TypeScript", "Tailwind CSS", "Vite", "Vercel"],
+    images: [
+      { src: "/projects/meowance/dashboard.webp", alt: "The dashboard: the worst course up top with the classes left to attend" },
+      { src: "/projects/meowance/login.webp", alt: "The login page" },
+    ],
+  },
+  {
+    slug: "veryjudgycat",
+    name: "VeryJudgyCat",
+    tagline: "LeetCode-style judge for n8n workflows",
+    description:
+      "Built for the Automathon 2.0 hackathon. Teams upload an exported n8n workflow and the judge runs it in a fresh, throw-away n8n container against hidden tests, then shows a verdict per sample test and how many hidden tests passed.",
+    details: [
+      "Telegram, Google Calendar, Sheets and Gmail are faked inside the judge network, so tests never message real people. Checks are exact or graded by an LLM against a rubric, and grader outages are refunded, never scored as zero.",
+      "One Go binary runs the site, the test machines and the organiser tools. Workers only make outbound calls, so lab PCs behind NAT can join.",
+    ],
+    repo: "https://github.com/dizziedbliss/meow-pspsps",
+    stack: ["Go", "n8n", "Docker", "SQLite", "LLM grading", "Cloudflare Tunnel"],
+    images: [
+      { src: "/projects/meow-pspsps/team-page.png", alt: "A team's page: problem statement, workflow upload and score" },
+      { src: "/projects/meow-pspsps/leaderboard.png", alt: "The public live leaderboard" },
+    ],
+  },
+  {
     slug: "winter",
     name: "Winter",
     tagline: "Deployment Platform",

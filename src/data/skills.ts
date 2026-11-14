@@ -5,11 +5,14 @@ export const SKILL_GROUPS = [
     name: "Web & desktop",
     items: ["React", "Tailwind CSS", "FastAPI", "Vite", "Electron", "Bubble Tea"],
   },
-  { name: "Data", items: ["Postgres", "Redis", "Supabase"] },
+  { name: "Data", items: ["Postgres", "Redis", "Supabase", "SQLite"] },
   {
     name: "Systems & cloud",
-    items: ["Docker", "Linux", "Railway", "Vercel", "Prometheus", "Grafana", "GoReleaser"],
+    items: ["Docker", "Linux", "Railway", "Vercel", "Prometheus", "Grafana", "GoReleaser", "Cloudflare Tunnel"],
   },
-  { name: "Bots & APIs", items: ["Hikari", "Lavalink", "Server-Sent Events", "Greenhouse API"] },
+  {
+    name: "Bots & APIs",
+    items: ["Hikari", "Lavalink", "Server-Sent Events", "Greenhouse API", "n8n", "Web scraping", "WebCrypto"],
+  },
   { name: "Everyday", items: ["Git", "GitHub", "CLI tooling"] },
 ];
