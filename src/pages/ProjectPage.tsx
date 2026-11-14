@@ -9,7 +9,8 @@ import { NotFoundPage } from "./NotFoundPage";
 export function ProjectPage({ slug }: { slug: string }) {
   const index = ALL_PROJECTS.findIndex((p) => p.slug === slug);
   const project = ALL_PROJECTS[index];
-  usePageTitle(project ? `${project.name} · Max!!` : "404 · The page is not alive · Max!!");
+  // usePageTitle(project ? `${project.name} · Max!!` : "404 · The page is not alive · Max!!");
+  usePageTitle(project ? `${project.name} · Adithya` : "404 · The page is not alive · Adithya");
 
   if (!project) return <NotFoundPage />;
 

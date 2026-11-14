@@ -4,7 +4,8 @@ import { AboutSection } from "@/components/AboutSection";
 import { usePageTitle } from "@/usePageTitle";
 
 export function HomePage() {
-  usePageTitle("Max!! · Adithya");
+  // usePageTitle("Max!! · Adithya");
+  usePageTitle("Adithya");
   return (
     <>
       <HomeSection />

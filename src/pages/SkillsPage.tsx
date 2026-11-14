@@ -3,7 +3,8 @@ import { Reveal } from "@/components/Reveal";
 import { usePageTitle } from "@/usePageTitle";
 
 export function SkillsPage() {
-  usePageTitle("Skills · Max!!");
+  // usePageTitle("Skills · Max!!");
+  usePageTitle("Skills · Adithya");
 
   return (
     <section className="wrap pt-40 pb-24 md:pt-48 md:pb-32">

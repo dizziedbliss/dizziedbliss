@@ -4,7 +4,8 @@ import { Link } from "@/router";
 import { usePageTitle } from "@/usePageTitle";
 
 export function NotFoundPage() {
-  usePageTitle("404 · The page is not alive · Max!!");
+  // usePageTitle("404 · The page is not alive · Max!!");
+  usePageTitle("404 · The page is not alive · Adithya");
 
   return (
     <section className="wrap pt-40 pb-24 md:pt-48 md:pb-32">
