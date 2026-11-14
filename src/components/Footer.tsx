@@ -8,7 +8,8 @@ export function Footer() {
 
   return (
     <footer className="wrap flex flex-wrap items-center justify-between gap-x-8 gap-y-3 border-t border-line py-10 text-base text-mute">
-      <span>Max!! · {new Date().getFullYear()}</span>
+      {/* <span>Max!! · {new Date().getFullYear()}</span> */}
+      <span>Adithya · {new Date().getFullYear()}</span>
       <span>last observed {observed}</span>
       <button
         type="button"

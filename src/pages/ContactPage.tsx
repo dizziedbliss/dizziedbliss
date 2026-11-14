@@ -24,7 +24,8 @@ function CopyEmail() {
 }
 
 export function ContactPage() {
-  usePageTitle("Contact · Max!!");
+  // usePageTitle("Contact · Max!!");
+  usePageTitle("Contact · Adithya");
   return (
     <section className="wrap pt-36 pb-24 md:pt-44 md:pb-32">
       <Reveal delay={350}>

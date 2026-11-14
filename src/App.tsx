@@ -26,7 +26,8 @@ function useSchrodingerTitle() {
     const onChange = () => {
       if (document.hidden) {
         saved = document.title;
-        document.title = "Is the cat dead? · Max!!";
+        // document.title = "Is the cat dead? · Max!!";
+        document.title = "Is the cat dead? · Adithya";
       } else {
         document.title = saved;
       }

@@ -68,7 +68,8 @@ export function Nav() {
             onClick={() => setOpen(false)}
             className="display flex items-center gap-3 text-3xl md:text-4xl"
           >
-            Max!!
+            {/* Max!! */}
+            Adithya
             <StickerCat className="h-12 w-auto md:h-[4.25rem]" />
           </Link>
 

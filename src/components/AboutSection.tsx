@@ -9,11 +9,13 @@ export function AboutSection() {
           <h2 className="display text-[clamp(4.5rem,13vw,10rem)]">About</h2>
         </Reveal>
         <Reveal delay={150} className="mt-4">
-          <p className="text-xl text-mute md:text-2xl">me, myself &amp; I</p>
+          {/* <p className="text-xl text-mute md:text-2xl">me, myself &amp; I</p> */}
+          <p className="text-xl text-mute md:text-2xl">a short introduction</p>
         </Reveal>
       </div>
 
       <div className="grid gap-14 lg:grid-cols-[1.4fr_1fr] lg:gap-20">
+        {/* Previous copy:
         <div className="flex flex-col gap-8 text-xl leading-relaxed text-mute md:text-2xl">
           <Reveal>
             <p className="display text-[clamp(2.25rem,4.5vw,3.75rem)] leading-[1.1] text-ink">
@@ -38,6 +40,33 @@ export function AboutSection() {
               Well, beyond computers, I love physics, space, quantum mechanics and weird
               fundamental things that run this universe, and also a lot of gaming and watching
               horror and scifi shows. &amp; yah I can also draw :3
+            </p>
+          </Reveal>
+        </div>
+
+        */}
+        <div className="flex flex-col gap-8 text-xl leading-relaxed text-mute md:text-2xl">
+          <Reveal>
+            <p className="display text-[clamp(2.25rem,4.5vw,3.75rem)] leading-[1.1] text-ink">
+              Hi, I'm Adithya, a computer science student who builds software end to end.
+            </p>
+          </Reveal>
+          <Reveal delay={100}>
+            <p>
+              I like building things and, just as much, working out why they break: reading logs,
+              tracing the root cause and fixing it properly.
+            </p>
+          </Reveal>
+          <Reveal delay={150}>
+            <p>
+              My work sits between software, systems and cloud: Go and TypeScript services, React
+              frontends, containers and deployment. I'm comfortable on both Linux and Windows.
+            </p>
+          </Reveal>
+          <Reveal delay={200}>
+            <p>
+              Outside of computers I follow physics, space and quantum mechanics, and I enjoy
+              gaming, sci-fi and drawing.
             </p>
           </Reveal>
         </div>
