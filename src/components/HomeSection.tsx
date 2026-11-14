@@ -1,4 +1,4 @@
-import { imgPortrait2 } from "@/config/assets";
+import { imgPortraitPro } from "@/config/assets";
 import { Link } from "@/router";
 import { Reveal, RevealImage } from "./Reveal";
 
@@ -8,7 +8,8 @@ export function HomeSection() {
       <div className="grid items-center gap-14 lg:grid-cols-[1.25fr_1fr]">
         <div>
           <Reveal delay={350}>
-            <p className="mb-6 text-lg tracking-wide text-mute md:text-xl">Hello, I'm</p>
+            {/* <p className="mb-6 text-lg tracking-wide text-mute md:text-xl">Hello, I'm</p> */}
+            <p className="mb-6 text-lg tracking-wide text-mute md:text-xl">Hi, I'm</p>
           </Reveal>
 
           <div className="relative">
@@ -18,35 +19,47 @@ export function HomeSection() {
           </div>
 
           <Reveal delay={900} className="mt-10 max-w-xl">
-            <p className="text-xl leading-relaxed text-mute md:text-2xl">
+            {/* <p className="text-xl leading-relaxed text-mute md:text-2xl">
               I build intelligent systems, weird interfaces and occasionally overthink quantum
               physics at 2am.
+            </p> */}
+            <p className="text-xl leading-relaxed text-mute md:text-2xl">
+              Computer science student building full-stack software and cloud systems.
             </p>
           </Reveal>
 
           <Reveal delay={1000} className="mt-10">
             <div className="flex flex-wrap items-center gap-4">
-              <Link to="/" section="projects" className="btn btn-solid">
+              {/* <Link to="/" section="projects" className="btn btn-solid">
                 Open the box <span aria-hidden>↓</span>
               </Link>
               <Link to="/contact" className="btn">
                 Say hello <span aria-hidden>→</span>
+              </Link> */}
+              <Link to="/" section="projects" className="btn btn-solid">
+                View projects <span aria-hidden>↓</span>
+              </Link>
+              <Link to="/contact" className="btn">
+                Get in touch <span aria-hidden>→</span>
               </Link>
             </div>
           </Reveal>
 
           <Reveal delay={1100} className="mt-8">
-            <p className="text-base text-mute">
+            {/* <p className="text-base text-mute">
               You can't really know me until you look. Go ahead, observe.
-            </p>
+            </p> */}
+            {/* <p className="text-base text-mute">Selected projects below.</p> */}
+            <p className="text-base text-mute">Open to work. Selected projects below.</p>
           </Reveal>
         </div>
 
         <RevealImage delay={500} className="mx-auto w-full max-w-md lg:max-w-none">
           <div className="aspect-[3/4] w-full overflow-hidden border border-line">
             <img
-              src={imgPortrait2}
-              alt="Adithya"
+              // src={imgPortrait2}
+              src={imgPortraitPro}
+              alt="Portrait of Adithya"
               className="h-full w-full object-cover object-top"
             />
           </div>
