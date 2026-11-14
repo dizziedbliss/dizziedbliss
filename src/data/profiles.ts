@@ -1,4 +1,5 @@
-export const EMAIL = "dizziedbliss@gmail.com";
+// export const EMAIL = "dizziedbliss@gmail.com";
+export const EMAIL = "adithyapartha12@gmail.com";
 
 export const PROFILES = [
   { label: "GitHub", handle: "@dizziedbliss", href: "https://github.com/dizziedbliss" },
