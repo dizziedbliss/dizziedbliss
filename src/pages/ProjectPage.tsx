@@ -1,3 +1,4 @@
+import { asset } from "@/config/asset";
 import { ALL_PROJECTS } from "@/data/projects";
 import { Link } from "@/router";
 import { CatBox } from "@/components/CatBox";
@@ -74,7 +75,7 @@ export function ProjectPage({ slug }: { slug: string }) {
             {project.gone && (
               <figure className="w-full max-w-[9rem]">
                 <img
-                  src="/projects/cat-yoinked.png"
+                  src={asset("/projects/cat-yoinked.png")}
                   alt="A scared black cat"
                   className="gone-cat w-full"
                 />
@@ -113,7 +114,7 @@ export function ProjectPage({ slug }: { slug: string }) {
               delay={(i % 2) * 120}
               className={i === 0 && images.length % 2 === 1 ? "md:col-span-2" : ""}
             >
-              <img src={img.src} alt={img.alt} className="w-full border border-line" />
+              <img src={asset(img.src)} alt={img.alt} className="w-full border border-line" />
             </RevealImage>
           ))
         ) : (

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { asset } from "@/config/asset";
 
 /** A small cat parked bottom-right, in thumb reach. Hover or tap it to spill the tea. */
 export function SpillTheTea() {
@@ -40,7 +41,7 @@ export function SpillTheTea() {
         onClick={(e) => !mouse(e.nativeEvent as PointerEvent) && setOpen((o) => !o)}
         className="pointer-events-auto cursor-pointer transition-transform duration-300 hover:-rotate-6"
       >
-        <img src="/cat-tea.png" alt="" className="gone-cat h-14 w-auto md:h-16" />
+        <img src={asset("/cat-tea.png")} alt="" className="gone-cat h-14 w-auto md:h-16" />
       </button>
     </div>
   );
